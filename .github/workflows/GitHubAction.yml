@@ -1,4 +1,4 @@
-name: my Github ACTION
+name: GitAction
 
 on:
   push:
@@ -22,5 +22,5 @@ jobs:
       - uses: actions/setup-node@v1
       
       # запуск link
-      - run: make link
+      - run: make lint
   
