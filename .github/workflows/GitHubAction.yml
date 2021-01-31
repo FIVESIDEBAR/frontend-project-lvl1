@@ -1,0 +1,26 @@
+name: my Github ACTION
+
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+
+  # install node and run make file "make lint"
+  
+  install-node-and-make-lint:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+    
+      # добавление репозитория на виртуальную машину
+      - uses: actions/checkout@v2
+      
+      # запуск нод
+      - uses: actions/setup-node@v1
+      
+      # запуск link
+      - run: make link
+  
